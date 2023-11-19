@@ -20,6 +20,7 @@ const EasySettingsPlugin = (() => {
 
   const checkForUpdate = async () => {
     try {
+      alert(1);
       const response = await fetch('https://github.com/xanndevs/xanndevsDiscordPlugins/blob/main/EasySettings/EasySettingsPlugin.plugin.js');
       const data = await response.text();
       const remoteVersionMatch = data.match(/version: ['"](.+?)['"]/);
