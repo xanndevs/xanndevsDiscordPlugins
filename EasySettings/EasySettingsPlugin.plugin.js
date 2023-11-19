@@ -1,7 +1,7 @@
 /**
  * @name EasySettingsPlugin
  * @displayName Easy Settings
- * @version 1.0.2
+ * @version 1.0.21
  * @author xanndevs
  * @authorId 395544953310281729
  * @source https://github.com/xanndevs/xanndevsDiscordPlugins
@@ -25,7 +25,7 @@ const EasySettingsPlugin = (() => {
         return "Open server settings when Shift+Alt is pressed.";
       }
       getVersion() {
-        return "1.0.2";
+        return "1.0.21";
       }
       getAuthor() {
         return "xanndev";
@@ -42,7 +42,7 @@ const EasySettingsPlugin = (() => {
   EasySettingsPlugin.META = {
     name: "Easy Settings Plugin",
     description: "Open server settings when Shift+Alt is pressed.",
-    version: "1.0.2",
+    version: "1.0.21",
     author: "xanndevs",
   };
   
