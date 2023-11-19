@@ -1,10 +1,10 @@
 /**
  * @name EasySettingsPlugin
  * @displayName Easy Settings
- * @version 1.0.1
- * @author xanndev
+ * @version 1.0.2
+ * @author xanndevs
  * @authorId 395544953310281729
- * @source https://xann.dev
+ * @source https://github.com/xanndevs/xanndevsDiscordPlugins
  * @description Open server settings when Shift+Alt is pressed.
  */
 
@@ -14,7 +14,6 @@ const EasySettingsPlugin = (() => {
       if (event.shiftKey && event.altKey) {
         document.getElementsByClassName("container__7c79d")[0].click();
         document.getElementById("guild-header-popout-settings").click();
-        alert(1);
       }
     };
   
@@ -26,7 +25,7 @@ const EasySettingsPlugin = (() => {
         return "Open server settings when Shift+Alt is pressed.";
       }
       getVersion() {
-        return "1.0.0";
+        return "1.0.2";
       }
       getAuthor() {
         return "xanndev";
@@ -43,7 +42,7 @@ const EasySettingsPlugin = (() => {
   EasySettingsPlugin.META = {
     name: "Easy Settings Plugin",
     description: "Open server settings when Shift+Alt is pressed.",
-    version: "1.0.0",
-    author: "xanndev",
+    version: "1.0.2",
+    author: "xanndevs",
   };
   
