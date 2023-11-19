@@ -4,7 +4,7 @@
  * @version 1.1.0
  * @author xanndevs
  * @authorId 395544953310281729
- * @source https://github.com/xanndevs/xanndevsDiscordPlugins
+ * @source https://github.com/xanndevs/xanndevsDiscordPlugins/tree/main/EasySettings
  * @description Open server settings when Shift+Alt is pressed.
  */
 
@@ -20,7 +20,7 @@ const EasySettingsPlugin = (() => {
 
     const checkForUpdate = async () => {
       try {
-        const response = await fetch('https://github.com/xanndevs/xanndevsDiscordPlugins');
+        const response = await fetch('https://github.com/xanndevs/xanndevsDiscordPlugins/tree/main/EasySettings');
         const data = await response.text();
         const remoteVersionMatch = data.match(/version: ['"](.+?)['"]/);
         
