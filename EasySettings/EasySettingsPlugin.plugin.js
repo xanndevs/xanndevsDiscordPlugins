@@ -1,7 +1,7 @@
 /**
  * @name EasySettingsPlugin
  * @displayName Easy Settings
- * @version 1.0.0
+ * @version 1.0.1
  * @author xanndev
  * @authorId 395544953310281729
  * @source https://xann.dev
@@ -14,6 +14,7 @@ const EasySettingsPlugin = (() => {
       if (event.shiftKey && event.altKey) {
         document.getElementsByClassName("container__7c79d")[0].click();
         document.getElementById("guild-header-popout-settings").click();
+        alert(1);
       }
     };
   
