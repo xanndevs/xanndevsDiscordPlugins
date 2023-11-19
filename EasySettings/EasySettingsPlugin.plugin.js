@@ -9,7 +9,7 @@
  */
 
 const EasySettingsPlugin = (() => {
-  const pluginName = 'EasySettingsPlugin';
+  const pluginName = 'ShiftJServerSettings';
   const pluginVersion = '1.0.1';
 
   const handleKeyPress = (event) => {
@@ -25,7 +25,7 @@ const EasySettingsPlugin = (() => {
       const response = await fetch('https://raw.githubusercontent.com/xanndevs/xanndevsDiscordPlugins/main/EasySettings/EasySettingsPlugin.plugin.js');
       const data = await response.text();
       const remoteVersionMatch = data.match(/version: ['"](.+?)['"]/);
-      
+
       if (remoteVersionMatch && remoteVersionMatch[1] !== pluginVersion) {
         const shouldUpdate = confirm(`A new version (${remoteVersionMatch[1]}) of ${pluginName} is available. Do you want to update?`);
         
@@ -49,7 +49,7 @@ const EasySettingsPlugin = (() => {
       return "Open server settings when Shift+Alt is pressed.";
     }
     getVersion() {
-      return pluginVersion;
+      return "1.0.1";
     }
     getAuthor() {
       return "xanndev";
@@ -57,7 +57,7 @@ const EasySettingsPlugin = (() => {
     start() {
       document.addEventListener("keydown", handleKeyPress);
 
-      setTimeout(checkForUpdate, 10000);
+      setTimeout(checkForUpdate, 1000);
     }
     stop() {
       document.removeEventListener("keydown", handleKeyPress);
@@ -68,6 +68,6 @@ const EasySettingsPlugin = (() => {
 EasySettingsPlugin.META = {
   name: "Easy Settings Plugin",
   description: "Open server settings when Shift+Alt is pressed.",
-  version: EasySettingsPlugin.pluginVersion,
+  version: "1.0.1",
   author: "xanndevs",
 };
