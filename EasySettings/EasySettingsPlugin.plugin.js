@@ -14,6 +14,7 @@ const EasySettingsPlugin = (() => {
       if (event.shiftKey && event.altKey) {
         document.getElementsByClassName("container__7c79d")[0].click();
         document.getElementById("guild-header-popout-settings").click();
+        alert(1);
       }
     };
 
