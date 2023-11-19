@@ -9,7 +9,7 @@
  */
 
 const EasySettingsPlugin = (() => {
-  const pluginName = 'ShiftJServerSettings';
+  const pluginName = 'EasySettingsPlugin';
   const pluginVersion = '1.0.1';
 
   const handleKeyPress = (event) => {
