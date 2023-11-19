@@ -1,7 +1,7 @@
 /**
  * @name EasySettingsPlugin
  * @displayName Easy Settings
- * @version 1.1.3
+ * @version 1.0.0
  * @author xanndevs
  * @authorId 395544953310281729
  * @source https://github.com/xanndevs/xanndevsDiscordPlugins/tree/main/EasySettings
@@ -9,6 +9,9 @@
  */
 
 const EasySettingsPlugin = (() => {
+  const pluginName = 'EasySettingsPlugin';
+  const pluginVersion = '1.0.0';
+
   const handleKeyPress = (event) => {
     // Check if the pressed key is Shift+Alt key combination is pressed
     if (event.shiftKey && event.altKey) {
@@ -20,11 +23,11 @@ const EasySettingsPlugin = (() => {
 
   const checkForUpdate = async () => {
     try {
-      alert(1);
       const response = await fetch('https://raw.githubusercontent.com/xanndevs/xanndevsDiscordPlugins/main/EasySettings/EasySettingsPlugin.plugin.js');
       const data = await response.text();
       const remoteVersionMatch = data.match(/version: ['"](.+?)['"]/);
       
+      alert(remoteVersionMatch + "\n\n" + remoteVersionMatch[0] + "\n\n" + remoteVersionMatch[0] +"\n\n" + pluginVersion);
       if (remoteVersionMatch && remoteVersionMatch[1] !== pluginVersion) {
         const shouldUpdate = confirm(`A new version (${remoteVersionMatch[1]}) of ${pluginName} is available. Do you want to update?`);
         
@@ -48,7 +51,7 @@ const EasySettingsPlugin = (() => {
       return "Open server settings when Shift+Alt is pressed.";
     }
     getVersion() {
-      return "1.1.3";
+      return pluginVersion;
     }
     getAuthor() {
       return "xanndev";
@@ -67,6 +70,6 @@ const EasySettingsPlugin = (() => {
 EasySettingsPlugin.META = {
   name: "Easy Settings Plugin",
   description: "Open server settings when Shift+Alt is pressed.",
-  version: "1.1.3",
+  version: EasySettingsPlugin.pluginVersion,
   author: "xanndevs",
 };
